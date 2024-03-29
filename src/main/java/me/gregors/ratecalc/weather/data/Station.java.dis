@@ -1,0 +1,32 @@
+package me.gregors.ratecalc.weather.data;
+
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Entity @Table(name = "station_names")
+@NoArgsConstructor(force = true) @Getter
+public class Station {
+    @Column(name = "station_name")
+    private final String name;
+    @Id
+    @Column(name = "station_id")
+    private final int WMOCode;
+    //@Id
+    //@GeneratedValue(strategy = GenerationType.AUTO)
+    //private int id;
+
+    public Station(String name, int WMOCode) {
+        this.name = name;
+        this.WMOCode = WMOCode;
+    }
+
+    @Override
+    public String toString() {
+        return "Station{" +
+                "name='" + name + '\'' +
+                ", WMOCode=" + WMOCode +
+                //", id=" + id +
+                '}';
+    }
+}
