@@ -13,7 +13,7 @@ and
 {
   "city": "<city>",
   "vehicle": "<vehicle>",
-  "atTimestamp": <timestamp>
+  "atTimestamp": <unix_timestamp>
 }
 ```
 atTimestamp is optional, but if it is in future or no data is about weather at that time, then error is give.  
